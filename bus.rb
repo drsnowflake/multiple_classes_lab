@@ -28,9 +28,7 @@ class Bus
   end
 
   def pick_up_from_stop(stop)
-    stop.queue.each do |passenger|
-      pick_up_passenger(passenger)
-    end
+    stop.queue.each { |passenger| pick_up_passenger(passenger) }
     stop.empty_bus_stop
   end
 end
